@@ -1,0 +1,17 @@
+'''
+
+O MESMO PROFESSOR DO DESAFIO ANTERIOR QUER SORTEAR A ORDEM DE
+ APRESENTAÇÃO DE TRABALHOS DOS ALUNOS. FAÇA UM PROGRAMA QUE
+  LEIA O NOME DOS QUATRO ALUNOS E MOSTRE A ORDEM SORTEADA.
+
+'''
+
+from random import shuffle
+
+n1 = input('Digite o nome do primeiro aluno: ')
+n2 = input('Digite o nome do segundo aluno: ')
+n3 = input('Digite o nome do terceiro aluno: ')
+n4 = input('Digite o nome do quarto aluno: ')
+lista = [n1, n2, n3, n4]
+shuffle(lista)
+print('A ordem de apresentação é {}'.format(lista))
