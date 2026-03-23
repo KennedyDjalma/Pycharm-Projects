@@ -6,6 +6,7 @@ EX: Kennedy Djalma de Santana
 PRIMEIRO = Kennedy
 ULTIMO = Santana
 ========================================================
+
 nome = nome.split()     =   vai pegar o nome completo
 e vai ler separadamente.
 
