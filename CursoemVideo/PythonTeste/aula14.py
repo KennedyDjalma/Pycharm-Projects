@@ -78,7 +78,7 @@ print('Voce digitou {} numeros pares e {} numeros impares!'.format(par, impar))
     QUALQUER E MOSTRE NA TELA OS N PRIMEIROS ELEMENTOS DE
     UMA SEQUENCIADE FIBONACCI
     EX:
-    0 - 1 - 3 - 5 - 8
+    0 - 1 - 1 - 2 - 3 - 5 - 8
     -------------------------------------------------
     64-
     CRIE UM PROGRAMA QUE LEIA VARIOS NUMEROS INTEIROS
