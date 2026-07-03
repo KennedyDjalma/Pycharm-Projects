@@ -3,6 +3,7 @@
 for item in range(2, 9, 3):  # 2= valor inicial; 9= valor final; 3= passo
     print(item)
 '''
+from cProfile import label
 
 '''nome = input('Digite seu nome: ')
 for letra in nome:
@@ -224,7 +225,7 @@ botao_somar.grid(row=2, columnspan=2, padx=10, pady=5)
 # RODANDO O LOOP PRINCIPAL
 janela.mainloop()
 '''
-
+'''
 # Utilizando o PyCharm, crie um programa com interface gráfica em Python que
 # receba dois números, compare-os e informe se o primeiro é maior, menor ou igual ao segundo.
 
@@ -264,4 +265,92 @@ botao_comp = tk.Button(janela, text="Comparar", command=comp_numeros)
 botao_comp.grid(row=2, columnspan=2, padx=10, pady=5)
 
 # Rodando o loop principal
+janela.mainloop()
+'''
+'''
+# =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
+                        #Tratamento de exceções na prática
+import tkinter as tk
+from tkinter import messagebox
+
+
+def div_numeros():
+    try:
+        numero1 = float(entry_numero1.get())
+        numero2 = float(entry_numero2.get())
+        resultado = numero1 / numero2
+        messagebox.showinfo('resultado', f'o quofeciente é {resultado}')
+    except ValueError:
+        messagebox.showerror('error', 'Insira os numeros validos.')
+
+        # CRIANDO JANELA
+janela = tk.Tk()
+janela.title("Dividir numeros")
+
+    # CRIANDO OS WIDGETS
+label_numero1 = tk.Label(janela, text="Numero 1:")
+label_numero1.grid(row=0, column=0, padx=10, pady=5, sticky="e")
+
+entry_numero1 = tk.Entry(janela)
+entry_numero1.grid(row=0, column=1, padx=10, pady=5)
+
+label_numero2 = tk.Label(janela, text="Numero 2:")
+label_numero2.grid(row=1, column=0, padx=10, pady=5, sticky="e")
+
+entry_numero2 = tk.Entry(janela)
+entry_numero2.grid(row=1, column=1, padx=10, pady=5)
+
+botao_div = tk.Button(janela, text="Dividir", command=div_numeros)
+botao_div.grid(row=2, columnspan=2, padx=10, pady=5)
+
+    # RODANDO O LOOP PRINCIPAL
+janela.mainloop()
+# =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
+'''
+
+'''
+# =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
+        #Tratamento de eveTratamento de eventos na práticantos na prática
+import tkinter as tk
+
+def atualizar_coordenadas(event):
+    x = event.x
+    y = event.y
+    label_coordenadas["text"] = f'coordenadas: X={x}, Y={y}'
+
+# CRIANDO JANELA
+janela = tk.Tk()
+janela.title("atualizar coordenadas")
+
+#CRIANDO WIDGET
+label_coordenadas = tk.Label(janela, text="coordenadas:")
+label_coordenadas.pack(padx=200, pady=100)
+
+# LIGANDO O EVENTO DE MOVIMENTO DE MOUSE
+janela.bind("<Motion>", atualizar_coordenadas)
+
+# RODANDO O LOOP
+janela.mainloop()
+# =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
+'''
+
+# =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
+import tkinter as tk
+def capturarClic(event):
+    x = event.x
+    y = event.y
+    label_coordenadas["text"] = f'Ultimo click: X={x}, Y={y}'
+
+# CRIANDO A JANELA
+janela = tk.Tk()
+janela.title("capturar clicks ESQUERDO")
+
+# CRIANDO WIDGETS
+label_coordenadas = tk.Label(janela, text="CLIQUE em qualquer lugar da janela")
+label_coordenadas.pack(padx=200, pady=100)
+
+# LIGANDO O EVENTO DE CLIQUE DO MOUSE A FUNÇÃO
+janela.bind("<Button-1>", capturarClic)
+
+# RODANDO O LOOP
 janela.mainloop()
