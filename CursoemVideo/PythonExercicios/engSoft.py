@@ -333,7 +333,7 @@ janela.bind("<Motion>", atualizar_coordenadas)
 janela.mainloop()
 # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
 '''
-
+'''
 # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
 import tkinter as tk
 def capturarClic(event):
@@ -354,3 +354,37 @@ janela.bind("<Button-1>", capturarClic)
 
 # RODANDO O LOOP
 janela.mainloop()
+# =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=- # =-=-=-=-=-=-=-=-=--=-=-=-
+'''
+'''
+#CONSTRUTORES E METODO INIT E SELF
+#SELF É A FORMA DA CLASSE REFERINDO A ELA MESMA
+# __INIT__ É O METODO CONSTRUTOR QUE CRIA OBJETO DA CLASSE
+
+class Conta:
+    def __init__(self, numero, cpf, nomeTitular, saldo):
+        self.numero = numero
+        self.cpf = cpf
+        self.nomeTitular = nomeTitular
+        self.saldo = saldo
+'''
+
+
+class Conta:
+    def __init__(self, numero, cpf, nomeTitular, saldo):
+        self.numero = numero
+        self.cpf = cpf
+        self.nomeTitular = nomeTitular
+        self.saldo = saldo
+
+
+def main():
+    c1 = Conta(numero=1, cpf=1, nomeTitular="Kenedy", saldo=1000)
+    print(f'Nome do titular {c1.nomeTitular}')
+    print(f'Saldo do titular {c1.saldo}')
+    print(f'Cpf {c1.cpf}')
+    print(f'saldo {c1.saldo}')
+
+
+if __name__ == '__main__':
+    main()
